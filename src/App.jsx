@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import PlannerFormTheFeed from "./PlannerFormTheFeed/main.js";
 import { Routes, Route } from "react-router-dom";
 import { ResultsPage } from "./ResultsPage.jsx";
-
 import "./PlannerFormTheFeed/style.css";
 
 export const App = () => {
