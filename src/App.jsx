@@ -9,13 +9,20 @@ import "./PlannerFormTheFeed/style.css";
 
 export const App = () => {
   return (
-    <div>
+    <>
       <Header />
-      <Routes>
-        <Route path="/" element={<PlannerFormTheFeed />} />
-        <Route path="/results" element={<ResultsPage />} />
-      </Routes>
+      <div
+        style={{
+          flexDirection: "column",
+          flexGrow: 1,
+          display: "flex",
+          height: `calc(100vh - 60px)`,
+          maxHeight: `-webkit-fill-available`,
+        }}
+      >
+        <PlannerFormTheFeed />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
