@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
-const ResultsPage = () => {
-  const [htmlState, setHtmlState] = useState("");
-  const [javascriptState, setJavascriptState] = useState("");
-  const [searchParams] = useSearchParams(); // react-router-dom v6
-  const [loading, setLoading] = useState(true);
+export const ResultsPage = () => {
+  const [ssrHTML, setSsrHTML] = useState("");
+  const [ssrJS, setSsrJS] = useState("");
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     const getSsr = async (resultId) => {
       try {
         const response = await fetch(
-          `https://apigcnr.prhcdn.com/planner_results/${resultId}`
+          `http://localhost:4000/planner_results/${resultId}`
         );
         const { data } = await response.json();
 
         window.APP_STATE = data.data;
-        setHtmlState(data.html);
-        setJavascriptState(data.javascript);
-        setLoading(false);
+        setSsrHTML(data.html);
+        setSsrJS(data.javascript);
       } catch (e) {
         console.log("error: ", e);
       }
@@ -31,24 +29,20 @@ const ResultsPage = () => {
   }, []);
 
   useEffect(() => {
-    if (javascriptState) {
+    if (ssrJS) {
       const newScript = document.createElement("script");
-      newScript.text = javascriptState;
+      newScript.text = ssrJS;
       document.body.appendChild(newScript);
       return () => document.body.removeChild(newScript);
     }
-  }, [javascriptState]);
-
-  if (loading) {
-    return <div style={{ textAlign: "center" }}>loading...</div>;
-  }
+  }, [ssrJS]);
 
   return (
-    <div
-      id="result-page-root"
-      dangerouslySetInnerHTML={{ __html: htmlState }}
-    />
+    <div>
+      <div
+        id="result-page-root"
+        dangerouslySetInnerHTML={{ __html: ssrHTML }}
+      />
+    </div>
   );
 };
-
-export default ResultsPage;
