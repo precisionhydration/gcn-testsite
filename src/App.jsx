@@ -2,10 +2,10 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
-import PlannerFormTheFeed from "./PlannerFormTheFeed/main.js";
+import PlannerFormTheFeed from "./PlannerForm/main.js";
 import { Routes, Route } from "react-router-dom";
 import { ResultsPage } from "./ResultsPage.jsx";
-import "./PlannerFormTheFeed/style.css";
+import "./PlannerForm/style.css";
 
 export const App = () => {
   return (
@@ -16,8 +16,7 @@ export const App = () => {
           flexDirection: "column",
           flexGrow: 1,
           display: "flex",
-          height: `calc(100vh - 60px)`,
-          maxHeight: `-webkit-fill-available`,
+          height: `calc(60vh - 60px)`,
         }}
       >
         <PlannerFormTheFeed />
