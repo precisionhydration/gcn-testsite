@@ -16,7 +16,7 @@ export const App = () => {
           flexDirection: "column",
           flexGrow: 1,
           display: "flex",
-          height: `calc(100vh - 120px)`,
+          height: `calc(100vh - 56px)`,
         }}
       >
         <PlannerFormTheFeed />
