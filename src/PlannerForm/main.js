@@ -104,6 +104,11 @@
   li {
     margin-left: 15px;
   }
+  @media all and (max-width: 600px) {
+    ul {
+      font-size: 13px;
+    }
+  }
 `,Bn=h.default.div`
   .question-title-container {
     text-align: center;

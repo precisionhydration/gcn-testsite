@@ -7,7 +7,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, "docs"),
     filename: "bundle.js",
-    publicPath: "./",
+    publicPath: "/gcn-testsite/",
   },
   module: {
     rules: [
@@ -33,7 +33,7 @@ const config = {
             loader: "url-loader",
             options: {
               limit: 10000,
-              publicPath: "./",
+              publicPath: "/gcn-testsite/",
             },
           },
         ],

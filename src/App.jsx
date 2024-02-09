@@ -3,8 +3,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 import PlannerFormTheFeed from "./PlannerForm/main.js";
-import { Routes, Route } from "react-router-dom";
-import { ResultsPage } from "./ResultsPage.jsx";
 import "./PlannerForm/style.css";
 
 export const App = () => {
