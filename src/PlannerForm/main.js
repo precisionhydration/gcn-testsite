@@ -103,10 +103,9 @@
   }
   li {
     margin-left: 15px;
-  }
-  @media all and (max-width: 600px) {
-    ul {
-      font-size: 13px;
+    font-size: 14px;
+    @media all and (max-width: 600px) {
+      font-size: 12px;
     }
   }
 `,Bn=h.default.div`

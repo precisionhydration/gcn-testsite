@@ -25,6 +25,7 @@ code {
   z-index: 4;
   img {
     width: auto;
+    max-width: 140px;
     height: 40px;
     @media all and (max-width: 500px) {
       height: 30px;
