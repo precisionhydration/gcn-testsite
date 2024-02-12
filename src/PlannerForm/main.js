@@ -45,7 +45,7 @@
   @media (max-width: 768px) {
     text-align: left;
   }
-`,Pn=({questions:e})=>{const{whitelabel:t,step:r}=xn(),a=e.find((e=>"-"===e.apiIdentifier))||e[0];return n().createElement(Mn,{className:"question-title-container",mt:t?2:[0,12],mb:[0,15]},n().createElement(f.xv,{variant:"questionTitle",as:"h1"},a.question),a.subheaderText&&n().createElement(f.xv,{variant:"questionSubtitle"},a.subheaderText),t&&r&&parseInt(r)>=1&&n().createElement(On,null))},Dn=h.default.div`
+`,Pn=({questions:e})=>{const{whitelabel:t,step:r}=xn(),a=e.find((e=>"-"===e.apiIdentifier))||e[0];return n().createElement(Mn,{className:"question-title-container",mt:t?2:[0,12],mb:[0,15]},t&&r&&parseInt(r)>=1&&n().createElement(On,null),n().createElement(f.xv,{variant:"questionTitle",as:"h1"},a.question),a.subheaderText&&n().createElement(f.xv,{variant:"questionSubtitle"},a.subheaderText))},Dn=h.default.div`
   display: flex;
   flex-direction: ${e=>e.vertical?"column":"row"};
   justify-content: center;
@@ -91,7 +91,7 @@
   align-items: center;
   h2 {
     color: #fff;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
     margin-bottom: 10px;
   }
