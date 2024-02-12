@@ -43,6 +43,13 @@ code {
   align-items: center;
 }
 
+.gcn-planner-wrapper {
+  height: calc(100vh - 90px);
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+}
+
 .MuiButtonBase-root {
   color: #ba0f15 !important;
 }

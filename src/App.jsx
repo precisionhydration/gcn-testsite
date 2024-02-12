@@ -9,14 +9,7 @@ export const App = () => {
   return (
     <>
       <Header />
-      <div
-        style={{
-          flexDirection: "column",
-          flexGrow: 1,
-          display: "flex",
-          height: `calc(100vh - 56px)`,
-        }}
-      >
+      <div className="gcn-planner-wrapper">
         <PlannerFormTheFeed />
       </div>
       <Footer />
