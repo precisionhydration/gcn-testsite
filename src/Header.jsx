@@ -1,11 +1,10 @@
 import React from "react";
-import header from "./images/header.png";
-import gcn from "./images/gcn.png";
+import gcn from "./images/gcn.png?v=1";
 
 const Header = () => {
   return (
     <div className="header">
-      <img src={gcn} />
+      <img className="gcn-logo" src={gcn} />
     </div>
   );
 };

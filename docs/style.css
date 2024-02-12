@@ -23,7 +23,7 @@ code {
   background-color: rgb(186, 15, 21);
   position: relative;
   z-index: 4;
-  img {
+  .gcn-logo {
     width: auto;
     max-width: 140px;
     height: 40px;
