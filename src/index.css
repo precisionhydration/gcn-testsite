@@ -23,13 +23,14 @@ code {
   background-color: rgb(186, 15, 21);
   position: relative;
   z-index: 4;
-  .gcn-logo {
-    width: auto;
-    max-width: 140px;
-    height: 40px;
-    @media all and (max-width: 500px) {
-      height: 30px;
-    }
+}
+
+.gcn-logo {
+  width: auto;
+  max-width: 140px;
+  height: 40px;
+  @media all and (max-width: 500px) {
+    height: 30px;
   }
 }
 
@@ -48,23 +49,24 @@ code {
 .MuiCalendarPicker-root {
   background-color: #2b2b2b !important;
   color: #fff !important;
-  .Mui-selected {
-    background-color: #ba0f15 !important;
-  }
-  .MuiPickersDay-root {
-    background-color: transparent !important;
-    &.Mui-selected {
-      background-color: #ba0f15 !important;
-      color: #101010 !important;
-    }
-  }
-  .MuiButtonBase-root,
-  .MuiTypography-caption {
-    color: #fff !important;
-  }
-  .MuiSvgIcon-root {
-    path {
-      fill: #fff !important;
-    }
-  }
+}
+
+.Mui-selected {
+  background-color: #ba0f15 !important;
+}
+.MuiPickersDay-root {
+  background-color: transparent !important;
+}
+
+.MuiPickersDay-root.Mui-selected {
+  background-color: #ba0f15 !important;
+  color: #101010 !important;
+}
+
+.MuiButtonBase-root,
+.MuiTypography-caption {
+  color: #fff !important;
+}
+.MuiSvgIcon-root path fill {
+  fill: #fff !important;
 }
